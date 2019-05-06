@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_lpname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Page"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#19e6d8"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <ImageView
+        android:id="@+id/iv_user"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/reading" />
+
+    <EditText
+        android:id="@+id/id_field"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/iv_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="#faffff"
+        android:ems="10"
+        android:hint="Student Id"
+        android:drawableLeft="@drawable/ic_person_logo"
+        android:drawablePadding="20dp"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/pass_field"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/id_field"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#faffff"
+        android:ems="10"
+        android:hint="Password"
+        android:drawableLeft="@drawable/ic_key_logo"
+        android:drawablePadding="20dp"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pass_field"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="#00f2e8"
+        android:text="Login"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Register Me"
+        android:textColor="#faffff"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>
