@@ -3,30 +3,30 @@ package com.example.smartcollege;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
-   // private static int SPLASH_TIME = 4000; //This is 4 seconds
+    private static int SPLASH_TIME = 2000; //This is 2.5 seconds
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        button = (Button)findViewById(R.id.btn_login);
-        button.setOnClickListener(new View.OnClickListener(){
+        setContentView(R.layout.activity_flash_screen);
+        flashScreen();
+    }
+
+    public void flashScreen(){
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View v){
-                openActivity2();
+            public void run() {
+                //Do any action here. Now we are moving to next page
+                Intent mySuperIntent = new Intent(MainActivity.this, LoginPage.class);
+                startActivity(mySuperIntent);
+                /* This 'finish()' is for exiting the app when back button pressed
+                 *  from Home page which is ActivityHome
+                 */
+                finish();
             }
-
-        });
+        }, SPLASH_TIME);
     }
-    public void openActivity2(){
-         Intent intent = new Intent(this, FlashScreen.class);
-         startActivity(intent);
-    }
-
 }

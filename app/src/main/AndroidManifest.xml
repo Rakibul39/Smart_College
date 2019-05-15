@@ -9,19 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".slides_helper"></activity>
+        <activity android:name=".SlideHelper"></activity>
         <activity android:name=".Menu_Croutine" />
         <activity android:name=".Menu_Gnotice" />
         <activity android:name=".Menu_EduFile" />
         <activity
-            android:name=".FlashScreen"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:name=".LoginPage" />
         <activity
             android:name=".Navigation_Drawer"
             android:label="@string/title_activity_navigation__drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HomePage" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -18,7 +18,7 @@ import android.widget.Button;
 
 public class Navigation_Drawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-        private Button button,button2,button4;
+        private Button button,button2,button3,button4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,15 @@ public class Navigation_Drawer extends AppCompatActivity
             @Override
             public void onClick(View v){
                 openMenu2();
+            }
+
+        });
+
+        button3 = (Button)findViewById(R.id.btn_fcInfo);
+        button3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openMenu3();
             }
 
         });
@@ -132,6 +141,10 @@ public class Navigation_Drawer extends AppCompatActivity
 
     public void openMenu2(){
         Intent intent = new Intent(this, Menu_Gnotice.class);
+        startActivity(intent);
+    }
+    public void openMenu3(){
+        Intent intent = new Intent(this, SlideHelper.class);
         startActivity(intent);
     }
 

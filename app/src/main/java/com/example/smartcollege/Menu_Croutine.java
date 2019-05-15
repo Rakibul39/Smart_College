@@ -1,7 +1,6 @@
 package com.example.smartcollege;
 
 import android.content.Intent;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +13,7 @@ public class Menu_Croutine extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_class_routine);
-        button = (Button)findViewById(R.id.btn_login);
+        button = (Button)findViewById(R.id.btn_CSE);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -25,7 +24,7 @@ public class Menu_Croutine extends AppCompatActivity {
     }
 
     public void slideOpen(){
-        Intent intent = new Intent(this, FlashScreen.class);
+        Intent intent = new Intent(this, SlideHelper.class);
         startActivity(intent);
     }
 }
