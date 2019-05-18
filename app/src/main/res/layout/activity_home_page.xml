@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Navigation_Drawer">
+    tools:context=".HomePage">
 
 
 <ScrollView
@@ -12,7 +12,7 @@
     android:layout_height="fill_parent"
     android:layout_alignParentTop="true"
     android:layout_alignParentLeft="true"
-    android:background="#afc9f6 "
+    android:background="#afc9f6"
     >
     
     <LinearLayout

@@ -17,16 +17,16 @@ public class SlideAdapter extends PagerAdapter {
 
     // list of images
     public int[] lst_images = {
-            R.drawable.civil,
             R.drawable.cse,
+            R.drawable.civil,
             R.drawable.eee,
             R.drawable.textile
     };
     // list of titles
     public String[] lst_title = {
             "CSE",
-            "EEE",
             "CIVIL",
+            "EEE",
             "TEXTILE"
     }   ;
     // list of descriptions

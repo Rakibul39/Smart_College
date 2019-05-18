@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1061294943140",
+    "firebase_url": "https://smartcollege-736d2.firebaseio.com",
+    "project_id": "smartcollege-736d2",
+    "storage_bucket": "smartcollege-736d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1061294943140:android:123ab32028cdbc4c",
+        "android_client_info": {
+          "package_name": "com.example.smartcollege"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1061294943140-id92c36sf9dncmfapjg1go5s1227dlb7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smartcollege",
+            "certificate_hash": "f62e937d19bce20390ff49fcf1be301132d1ba17"
+          }
+        },
+        {
+          "client_id": "1061294943140-c6g2ske6lk6lmp7j57a34383sbnbfln4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjRDBQyAsbaWeRwHoqryqdRB8MTIN-a2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1061294943140-c6g2ske6lk6lmp7j57a34383sbnbfln4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

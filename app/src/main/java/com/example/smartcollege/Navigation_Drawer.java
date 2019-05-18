@@ -15,15 +15,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Navigation_Drawer extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
         private Button button,button2,button3,button4;
+        FirebaseAuth mAuth;
+        FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation__drawer);
+
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setLogo(R.drawable.tec_logo);
+        //getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         button = (Button)findViewById(R.id.btn_edFiles);
         button.setOnClickListener(new View.OnClickListener(){
@@ -33,6 +48,15 @@ public class Navigation_Drawer extends AppCompatActivity
             }
 
         });
+
+        /*editButton = (Button)findViewById(R.id.btn_Edit);
+        editButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openEditProfile();
+            }
+
+        });*/
 
         button2 = (Button)findViewById(R.id.btn_gnNotice);
         button2.setOnClickListener(new View.OnClickListener(){
@@ -70,12 +94,16 @@ public class Navigation_Drawer extends AppCompatActivity
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //updateNavHeader();
     }
 
     @Override
@@ -103,8 +131,12 @@ public class Navigation_Drawer extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_logOut) {
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent = new Intent(this, LoginPage.class);
+            startActivity(intent);
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -118,7 +150,9 @@ public class Navigation_Drawer extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             // Handle the camera action
-        } else if (id == R.id.nav_admin) {
+        } else if (id == R.id.nav_editProfile) {
+            Intent intent = new Intent(this, EditProfilePage.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_file) {
 
@@ -152,4 +186,34 @@ public class Navigation_Drawer extends AppCompatActivity
         Intent intent = new Intent(this, Menu_Croutine.class);
         startActivity(intent);
     }
+
+    public void updateNavHeader(){
+        NavigationView navigationView =(NavigationView) findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        //Button editButton = headerView.findViewById(R.id.btn_Edit);
+        ImageView navUserPhot = headerView.findViewById(R.id.imv_navHeader);
+        EditText navUsername = headerView.findViewById(R.id.tv_uname);
+        EditText navUserMail = headerView.findViewById(R.id.tv_email);
+
+        navUserMail.setText("rony@gmail.com");
+        navUsername.setText("Rakibul Rony");
+
+        // now we will use Glide to load user image
+        // first we need to import the library
+
+        //Glide.with(this).load(currentUser.getPhotoUrl()).into(navUserPhot);
+
+        /*editButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openEditProfile();
+            }
+
+        });*/
+    }
+
+    /*public void openEditProfile(){
+        Intent intent = new Intent(this, EditProfilePage.class);
+        startActivity(intent);
+    }*/
 }

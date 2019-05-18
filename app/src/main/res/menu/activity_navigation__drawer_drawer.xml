@@ -9,9 +9,9 @@
             android:icon="@drawable/home_icon"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_admin"
+            android:id="@+id/nav_editProfile"
             android:icon="@drawable/admin"
-            android:title="Admin" />
+            android:title="Edit Profile" />
         <item
             android:id="@+id/nav_file"
             android:icon="@drawable/add_new_document"
