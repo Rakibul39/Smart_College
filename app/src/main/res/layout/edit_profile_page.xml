@@ -8,18 +8,20 @@
     tools:context=".EditProfilePage">
 
     <RelativeLayout
-        android:layout_width="402dp"
-        android:layout_height="257dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="72dp">
+        tools:layout_editor_absoluteY="111dp">
 
         <TextView
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
             android:text="Insert Image"
             android:textSize="25sp"
             android:textStyle="bold"
@@ -32,37 +34,12 @@
             android:id="@+id/imv_profilePic"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/text1"
+            android:layout_marginTop="-8dp"
             android:background="@drawable/ic_person_logo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="70dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text1"
-            android:layout_marginVertical="150dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent">
-
-
-            <Button
-                android:id="@+id/btn_imagelocation"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginLeft="140dp"
-                android:background="@drawable/ic_upload_file" />
-
-            <Button
-                android:id="@+id/btn_upload"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="@drawable/ic_upload" />
-
-        </LinearLayout>
     </RelativeLayout>
 
 
@@ -124,7 +101,7 @@
         android:background="@drawable/edit_text_style"
         android:ems="10"
         android:hint="Department"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/regPassword2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.569"
@@ -143,7 +120,7 @@
         android:background="@drawable/edit_text_style"
         android:ems="10"
         android:hint="Session"
-        android:inputType="textPassword"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.569"
         app:layout_constraintStart_toStartOf="parent"

@@ -13,6 +13,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".EditProfilePage"></activity>
         <activity android:name=".SlideHelper" />
+        <activity android:name=".RegisterPage" />
         <activity android:name=".Menu_Croutine" />
         <activity android:name=".Menu_Gnotice" />
         <activity android:name=".Menu_EduFile" />

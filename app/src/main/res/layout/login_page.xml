@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/iv_user"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="220dp"
+        android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
@@ -62,7 +62,7 @@
         android:layout_below="@id/btn_login"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Register Me"
+        android:text="Are you new user? Click here for Sign up"
         android:textColor="#faffff"
         android:textSize="20sp" />
 

@@ -24,6 +24,7 @@ public class LoginPage extends AppCompatActivity {
     EditText emailTxt, passTxt;
     TextView register;
     private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
     ProgressBar progressBar;
 
     @Override
@@ -39,12 +40,12 @@ public class LoginPage extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        /*register.setOnClickListener(new View.OnClickListener(){
+        register.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent intent = new Intent(LoginPage.this, SlideHelper.class);
+                Intent intent = new Intent(LoginPage.this, RegisterPage.class);
                 startActivity(intent);
             }
-        });*/
+        });
 
         button.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -57,7 +58,7 @@ public class LoginPage extends AppCompatActivity {
                 }
 
                 if(TextUtils.isEmpty(password)){
-                    Toast.makeText(LoginPage.this, "Please Enter Email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginPage.this, "Please Enter password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

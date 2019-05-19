@@ -2,6 +2,7 @@ package com.example.smartcollege;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -27,6 +28,7 @@ public class Navigation_Drawer extends AppCompatActivity
         private Button button,button2,button3,button4;
         FirebaseAuth mAuth;
         FirebaseUser currentUser;
+        private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +38,17 @@ public class Navigation_Drawer extends AppCompatActivity
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
 
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);
-        //getSupportActionBar().setLogo(R.drawable.tec_logo);
-        //getSupportActionBar().setDisplayUseLogoEnabled(true);
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if(firebaseAuth.getCurrentUser()== null){
+                    Intent loginIntent = new Intent(Navigation_Drawer.this, LoginPage.class);
+                    loginIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(loginIntent);
+
+                }
+            }
+        };
 
         button = (Button)findViewById(R.id.btn_edFiles);
         button.setOnClickListener(new View.OnClickListener(){
@@ -104,6 +114,13 @@ public class Navigation_Drawer extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //updateNavHeader();
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+
     }
 
     @Override
