@@ -13,6 +13,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +25,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -63,6 +66,7 @@ public class Menu_Gnotice extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.buttonUploadFile).setOnClickListener(this);
         findViewById(R.id.textViewUploads).setOnClickListener(this);
     }
+
 
     //this function will get the pdf from the storage
     private void getPDF() {
@@ -146,7 +150,7 @@ public class Menu_Gnotice extends AppCompatActivity implements View.OnClickListe
                 getPDF();
                 break;
             case R.id.textViewUploads:
-                //startActivity(new Intent(this, ViewUploadActivity.class));
+                startActivity(new Intent(this, View_PDF_Files.class));
                 break;
         }
     }
