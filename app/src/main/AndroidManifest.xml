@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View_PDF_Files"></activity>
+        <activity android:name=".Notice_board_add"></activity>
+        <activity android:name=".Notice_board" />
+        <activity android:name=".View_PDF_Files" />
         <activity android:name=".EditProfilePage" />
         <activity android:name=".SlideHelper" />
         <activity android:name=".RegisterPage" />

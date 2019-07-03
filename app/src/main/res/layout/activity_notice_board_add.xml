@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#afc9f6"
+    tools:context=".Notice_board_add">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Notices"
+        android:textColor="#5b39c6"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/noticeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Write Title"
+        android:background="@drawable/edit_text_style"
+        android:textSize="22sp"
+        />
+
+
+    <EditText
+        android:id="@+id/noticeBody"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/noticeTitle"
+        android:layout_margin="15dp"
+        android:hint="Write notices here"
+        android:background="@drawable/edit_text_style"
+        android:textSize="22sp"/>
+
+    <Button
+        android:id="@+id/btn_publish"
+        android:layout_below="@id/noticeBody"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="35dp"
+        android:text="Publish"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        />
+
+
+</RelativeLayout>

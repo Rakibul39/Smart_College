@@ -191,7 +191,7 @@ public class Navigation_Drawer extends AppCompatActivity
     }
 
     public void openMenu2(){
-        Intent intent = new Intent(this, View_PDF_Files.class);
+        Intent intent = new Intent(this, Notice_board.class);
         startActivity(intent);
     }
     public void openMenu3(){

@@ -12,10 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="85dp"
-        android:text="General Notices"
+        android:text="Notes"
         android:textColor="#5b39c6"
         android:textSize="30sp"
-        android:textStyle="italic" />
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editTextFileName"
@@ -26,7 +26,7 @@
         android:layout_marginTop="232dp"
         android:textSize="22sp"
         android:background="@drawable/edit_text_style"
-        android:hint="Enter Notice Title" />
+        android:hint="Enter Title" />
 
     <Button
         android:id="@+id/buttonUploadFile"

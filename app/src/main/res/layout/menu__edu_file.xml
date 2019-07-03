@@ -4,48 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#afc9f6"
     tools:context=".Menu_EduFile">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:background="#afc9f6">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="165dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginRight="10dp"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="15dp">
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
-                    android:layout_width="175dp"
-                    android:layout_height="135dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
+                    <ImageView
                         android:id="@+id/imv_m1"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_centerInParent="true"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
                         android:src="@drawable/assignment" />
 
-                        <TextView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/imv_m1"
@@ -53,86 +49,75 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="Class Notes"
-                        android:textSize="18sp" />
+                        android:textSize="20sp" />
 
-                        <Button
-                        android:id="@+id/btn_CN"
+                    <Button
+                        android:id="@+id/btn_classNotes"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
                         android:background="@android:color/transparent" />
 
-                    </RelativeLayout>
 
-                </android.support.v7.widget.CardView>
+                </RelativeLayout>
 
-            </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="15dp">
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
-                    android:layout_width="175dp"
-                    android:layout_height="135dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:layout_centerInParent="true"
-                    android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
+                    <ImageView
                         android:id="@+id/imv_m2"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_centerInParent="true"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
                         android:src="@drawable/notes" />
 
-                        <TextView
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/imv_m2"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Assignments"
-                        android:textSize="18sp" />
+                        android:text="Assignment"
+                        android:textSize="20sp"  />
 
-                        <Button
-                        android:id="@+id/btn_assignment"
+                    <Button
+                        android:id="@+id/btn_Assignment"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
                         android:background="@android:color/transparent" />
 
-                    </RelativeLayout>
+
+                </RelativeLayout>
 
             </android.support.v7.widget.CardView>
 
-            </RelativeLayout>
+        </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="15dp">
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="175dp"
-                    android:layout_height="135dp"
-                    android:layout_centerInParent="true"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -140,9 +125,10 @@
 
                     <ImageView
                         android:id="@+id/imv_m3"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_centerInParent="true"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerHorizontal="true"
                         android:src="@drawable/exam" />
 
                     <TextView
@@ -153,74 +139,62 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="Class Tests"
-                        android:textSize="18sp" />
+                        android:textSize="20sp"  />
 
                     <Button
                         android:id="@+id/btn_CT"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
                         android:background="@android:color/transparent" />
+
 
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <android.support.v7.widget.CardView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="15dp">
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <android.support.v7.widget.CardView
-                    android:layout_width="175dp"
-                    android:layout_height="135dp"
-                    android:layout_centerInParent="true"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    <RelativeLayout
+                    <ImageView
+                        android:id="@+id/imv_m4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/syllabus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imv_m4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Syllabus"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btn_syllabus"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent" />
 
-                        <ImageView
-                            android:id="@+id/imv_m4"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/syllabus" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/imv_m4"
-                            android:layout_centerHorizontal="true"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginBottom="10dp"
-                            android:text="Syllabus"
-                            android:textSize="18sp" />
+                </RelativeLayout>
 
-                        <Button
-                            android:id="@+id/btn_sy"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentLeft="true"
-                            android:background="@android:color/transparent" />
-
-                    </RelativeLayout>
-
-                 </android.support.v7.widget.CardView>
-
-            </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
-    </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>
